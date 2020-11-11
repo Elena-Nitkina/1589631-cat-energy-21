@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Елена Ниткина](https://up.htmlacademy.ru/adaptive/21/user/1589631).
-* Наставник: `Неизвестно`.
+* Наставник: [Мария Коршунова](https://up.htmlacademy.ru/adaptive/21/user/193628).
 
 ---
 
