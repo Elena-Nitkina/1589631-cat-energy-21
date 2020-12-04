@@ -1,20 +1,4 @@
-.contacts__title {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  color: @special-black;
-  text-transform: uppercase;
-}
-
-.contacts__text {
-  font-family: @special-font, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: @special-dark-grey;
-}
-
-.contacts__item {
+.personal__item {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -23,17 +7,21 @@
   padding-bottom: 14px;
 }
 
-.contacts__input {
+.personal__input {
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: @special-dark-grey;
   text-transform: uppercase;
-  border: 1px solid @input-dark;
+  border: 1px solid @input;
 
-  &:disabled {
-    border: 2px solid @special-dark-grey;
+  &:hover {
+    border: 1px solid @input-dark;
+  }
+
+  &:focus {
+    border: 1px solid @special-dark-grey;
   }
 
   &::placeholder {
