@@ -1,10 +1,28 @@
 .advantages__container {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    max-width: 1220px;
+    flex-direction: row;
+  }
 }
 
 .advantages__list {
   background-color: @basic-grey;
   padding: 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 53px;
+    width: 464px;
+  }
 }
 
 .advantages__title {

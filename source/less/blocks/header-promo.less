@@ -3,11 +3,24 @@
   background-position: 0 0;
   background-repeat: no-repeat;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
 }
 
 .header-promo__container {
   background-color: fade(@basic-green, 85%);
   padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    max-width: 1220px;
+  }
 }
 
 .header-promo__title {

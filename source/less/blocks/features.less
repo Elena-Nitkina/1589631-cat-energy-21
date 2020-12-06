@@ -1,5 +1,14 @@
 .features__container {
   padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    max-width: 1220px;
+  }
 }
 
 .features__title {
@@ -16,4 +25,14 @@
   font-weight: 400;
   color: @special-dark-grey;
   padding-bottom: 20px;
+}
+
+.features__list {
+  display: grid;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+  }
 }
