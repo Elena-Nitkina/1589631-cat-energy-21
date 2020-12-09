@@ -30,13 +30,21 @@
     opacity: 0.3;
   }
 
-  @media (min-width: @desktop-width) {
-    color: @white;
+  &--index-page {
+    @media (min-width: @desktop-width) {
+      color: @white;
+    }
   }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav__toggle {
     display: none;
+  }
+}
+
+.main-nav__container {
+  @media (min-width: @desktop-width) {
+    padding-top: 45px;
   }
 }
