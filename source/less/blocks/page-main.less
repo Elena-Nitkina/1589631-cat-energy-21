@@ -3,6 +3,19 @@
   line-height: 36px;
   font-weight: 400;
   color: @black;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    max-width: 1220px;
+  }
 }
 
 .page-main__intro {
@@ -11,4 +24,15 @@
   font-weight: 400;
   color: @black;
   text-transform: uppercase;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: auto;
+    max-width: 1220px;
+  }
 }

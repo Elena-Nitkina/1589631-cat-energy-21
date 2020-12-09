@@ -4,6 +4,14 @@
   display: flex;
   flex-direction: column;
 
+  &--index-page {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: 0;
+      left: 110px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
@@ -16,9 +24,6 @@
   @media (min-width: @desktop-width) {
     margin: auto;
     max-width: 1220px;
-    position: absolute;
-    top: 50px;
-    left: 110px;
   }
 }
 
@@ -33,5 +38,6 @@
   @media (min-width: @desktop-width) {
     min-height: 141px;
     width: 202px;
+    padding-top: 30px;
   }
 }

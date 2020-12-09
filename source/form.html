@@ -47,48 +47,52 @@
   </header>
   <main class="page-main">
     <h1 class="page-main__title">Подбор программы</h1>
-    <p class="page-main__intro">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <p class="page-main__intro">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
     <form class="selection-form" action="https://echo.htmlacademy.ru" method="get">
-      <div class="selection-form__personal personal">
-        <p class="personal__item">
-          <label for="name">Имя:*</label>
-          <input class="personal__input" type="text" id="name" required placeholder="Барсик">
-        </p>
-        <p class="personal__item">
-          <label for="weight">Вес(кг):*</label>
-          <input class="personal__input" type="text" id="weight" required placeholder="7">
-        </p>
-        <p class="personal__item">
-          <label for="age">Возраст(лет):</label>
-          <input class="personal__input" type="text" id="age" placeholder="7">
-        </p>
+      <div class="selection-form__top">
+        <div class="selection-form__personal personal">
+          <p class="personal__item">
+            <label for="name">Имя:*</label>
+            <input class="personal__input" type="text" id="name" required placeholder="Барсик">
+          </p>
+          <p class="personal__item">
+            <label for="weight">Вес(кг):*</label>
+            <input class="personal__input" type="text" id="weight" required placeholder="7">
+          </p>
+          <p class="personal__item">
+            <label for="age">Возраст(лет):</label>
+            <input class="personal__input" type="text" id="age" placeholder="7">
+          </p>
+        </div>
+        <fieldset class="selection-form__needs needs">
+          <ul class="needs__filter">
+            <li class="needs__item">
+              <input class="needs__input" type="radio" name="needs" value="slimming" id="filter-slimming" checked>
+              <label for="filter-slimming">Похудение</label>
+            </li>
+            <li class="needs__item">
+              <input class="needs__input" type="radio" name="needs" value="weight-gain" id="filter-gain">
+              <label for="filter-gain">Набор массы</label>
+            </li>
+            <li class="needs__item">
+              <input class="needs__input" type="radio" name="needs" value="need-help" id="filter-help">
+              <label for="filter-help">Не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
       </div>
-      <fieldset class="selection-form__needs needs">
-        <ul class="needs__filter">
-          <li class="needs__item">
-            <input class="needs__input" type="radio" name="needs" value="slimming" id="filter-slimming" checked>
-            <label for="filter-slimming">Похудение</label>
-          </li>
-          <li class="needs__item">
-            <input class="needs__input" type="radio" name="needs" value="weight-gain" id="filter-gain">
-            <label for="filter-gain">Набор массы</label>
-          </li>
-          <li class="needs__item">
-            <input class="needs__input" type="radio" name="needs" value="need-help" id="filter-help">
-            <label for="filter-help">Не знаю (нужен ваш совет)</label>
-          </li>
-        </ul>
-      </fieldset>
       <div class="selection-form__contacts contacts">
         <h2 class="selection-form__title">Контактные данные (владельца кота)</h2>
-        <p class="contacts__item">
-          <label for="e-mail">E-mail:*</label>
-          <input class="contacts__input" type="email" id="e-mail" required placeholder="kuklachev@gmail.com">
-        </p>
-        <p class="contacts__item">
-          <label for="tel">Телефон:*</label>
-          <input class="contacts__input" type="tel" id="tel" required placeholder="8 (960) 900-60-90">
-        </p>
+        <div class="selection-form__contact-details">
+          <p class="contacts__item">
+            <label for="e-mail">E-mail:*</label>
+            <input class="contacts__input" type="email" id="e-mail" required placeholder="kuklachev@gmail.com">
+          </p>
+          <p class="contacts__item">
+            <label for="tel">Телефон:*</label>
+            <input class="contacts__input" type="tel" id="tel" required placeholder="8 (960) 900-60-90">
+          </p>
+        </div>
       </div>
       <div class="selection-form__comment comment">
         <h2 class="selection-form__title">Комментарий</h2>
@@ -115,12 +119,14 @@
           </li>
         </ul>
       </fieldset>
-      <button class="button" type="submit">Отправить заявку</button>
-      <p class="selection-form__legend">
-        <small>
-          * — Обязательные поля
-        </small>
-      </p>
+      <div class="selection-form__submit">
+        <button class="button" type="submit">Отправить заявку</button>
+        <p class="selection-form__legend">
+          <small>
+            * — Обязательные поля
+          </small>
+        </p>
+      </div>
     </form>
   </main>
   <footer class="page-footer">
@@ -134,21 +140,29 @@
       </div>
       <div class="page-footer__main-footer">
         <div class="page-footer__logo">
-          <a class="page-footer__logo-link logo-link" href="index.html">
-            <img class="logo-link__image" src="https://via.placeholder.com/128x24" width="128" height="24"
-              alt="Логотип Cat Energy">
+          <a class="page-footer__logo-link logo-link">
+            <img class="logo-link__image" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип Cat Energy">
           </a>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+              <a class="social__link social__link--vkontakte" href="#">
+                <span class="visually-hidden">Мы в Вконтакте</span>
+                <img src="https://via.placeholder.com/23x16" width="23" height="16">
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="#">
+                <span class="visually-hidden">Мы в Инстаграме</span>
+                <img src="https://via.placeholder.com/16x16" width="16" height="16">
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="#">
+                <span class="visually-hidden">Мы в Фейсбуке</span>
+                <img src="https://via.placeholder.com/22x22" width="22" height="22">
+              </a>
             </li>
           </ul>
         </div>
@@ -156,6 +170,7 @@
           <a class="copyright__link-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">HTML Academy</span>
+            <img src="https://via.placeholder.com/27x34" width="27" height="34">
           </a>
         </div>
       </div>
