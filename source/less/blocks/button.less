@@ -16,4 +16,20 @@
   &:active {
     color: fade(@white, 30%);
   }
+
+  &--extra-goods {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      margin-left: 35px;
+    }
+  }
+
+  &--catalog-item {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }

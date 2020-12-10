@@ -1,10 +1,28 @@
 .footer-promo {
   height: 289px;
+  width: 240px;
   background-image: url("../img/footer-promo-background.png");
   background-position: 0 0;
   background-repeat: no-repeat;
   color: @white;
-  padding: 39px 20px 35px 20px;
+  padding: 0 20px;
+  margin: 0 20px 35px 20px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-green;
+    margin: 0 30px 75px 30px;
+    height: 200px;
+    width: 668px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 205px;
+    height: 289px;
+    margin: 0 20px 35px 20px;
+    position: absolute;
+    right: 110px;
+    bottom: -785px;
+  }
 }
 
 .footer-promo__slogan {
@@ -13,4 +31,20 @@
   line-height: 20px;
   font-weight: 400;
   color: @white;
+  text-align: center;
+  margin: 0;
+  padding: 145px 24px 0 24px;
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    padding-top: 70px;
+    padding-left: 423px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    padding-top: 185px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
