@@ -28,6 +28,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, min-content);
+  align-content: end;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr;
@@ -38,6 +39,9 @@
 }
 
 .catalog__item-more {
+  display: grid;
+  padding: 20px 0;
+
   @media (min-width: @tablet-width) {
     border: 2px solid @basic-grey;
   }
