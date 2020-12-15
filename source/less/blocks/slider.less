@@ -18,6 +18,7 @@
 .slider {
   display: flex;
   flex-direction: column;
+  padding-top: 27px;
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
@@ -29,4 +30,16 @@
 
 .slider__toggles {
   align-self: center;
+}
+
+.slider__image {
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 690px;
+    height: 656px;
+  }
 }

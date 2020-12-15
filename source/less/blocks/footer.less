@@ -63,9 +63,26 @@
 .page-footer__copyright {
   display: flex;
   justify-content: space-between;
+  padding-top: 22px;
 }
 
 .page-footer__logo {
   display: flex;
   justify-content: center;
+  padding-bottom: 27px;
+  border-bottom: 1px solid @link-border;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.page-footer__social {
+  padding-top: 21px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid @link-border;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }

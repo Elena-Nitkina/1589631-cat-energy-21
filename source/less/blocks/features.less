@@ -1,13 +1,18 @@
 .features__container {
   padding: 20px;
+  padding-top: 0;
 
   @media (min-width: @tablet-width) {
     padding: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid @nav-border-top;
   }
 
   @media (min-width: @desktop-width) {
     margin: auto;
     max-width: 1220px;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 }
 
@@ -16,6 +21,18 @@
   line-height: 40px;
   font-weight: 400;
   color: @black;
+  margin-top: 0;
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 73px;
+  }
 }
 
 .features__item {
@@ -24,7 +41,95 @@
   line-height: 18px;
   font-weight: 400;
   color: @special-dark-grey;
-  padding-bottom: 20px;
+  margin-bottom: 26px;
+  padding-left: 80px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 0;
+    padding-top: 111px;
+    padding-right: 75px;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+    padding-top: 113px;
+  }
+
+  &--icon-leaf::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @basic-green;
+    background-image: url("../img/icon-leaf.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--icon-glass::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @basic-green;
+    background-image: url("../img/icon-glass.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--icon-cutlery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @basic-green;
+    background-image: url("../img/icon-cutlery.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--icon-clock::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @basic-green;
+    background-image: url("../img/icon-clock.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
 }
 
 .features__list {
