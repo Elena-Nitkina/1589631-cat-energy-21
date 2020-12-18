@@ -1,10 +1,8 @@
 .features__container {
-  padding: 20px;
-  padding-top: 0;
+  padding: 0 20px 20px 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 30px;
-    padding-top: 30px;
+    padding: 14px 30px 30px 30px;
     border-bottom: 1px solid @nav-border-top;
   }
 
@@ -41,17 +39,22 @@
   line-height: 18px;
   font-weight: 400;
   color: @special-dark-grey;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   padding-left: 80px;
   position: relative;
+  min-height: 60px;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    padding-left: 0;
-    padding-top: 111px;
-    padding-right: 75px;
-    padding-bottom: 47px;
+    padding: 111px 75px 47px 0;
+    min-height: 80px;
   }
 
   @media (min-width: @desktop-width) {
@@ -59,77 +62,74 @@
     padding-top: 113px;
   }
 
-  &--icon-leaf::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: @basic-green;
-    background-image: url("../img/icon-leaf.svg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
+  &--icon-leaf {
     @media (min-width: @tablet-width) {
-      width: 80px;
-      height: 80px;
+      background-image: url("../img/1.svg");
+      background-position: 124px 2px;
+      background-repeat: no-repeat;
+      background-size: 75px 227px;
     }
   }
 
-  &--icon-glass::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: @basic-green;
-    background-image: url("../img/icon-glass.svg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
+  &--icon-glass {
     @media (min-width: @tablet-width) {
-      width: 80px;
-      height: 80px;
+      background-image: url("../img/2.svg");
+      background-position: 124px 2px;
+      background-repeat: no-repeat;
+      background-size: 113px 227px;
     }
   }
 
-  &--icon-cutlery::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: @basic-green;
-    background-image: url("../img/icon-cutlery.svg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
+  &--icon-cutlery {
     @media (min-width: @tablet-width) {
-      width: 80px;
-      height: 80px;
+      background-image: url("../img/3.svg");
+      background-position: 124px 2px;
+      background-repeat: no-repeat;
+      background-size: 110px 227px;
     }
   }
 
-  &--icon-clock::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: @basic-green;
-    background-image: url("../img/icon-clock.svg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
+  &--icon-clock {
     @media (min-width: @tablet-width) {
-      width: 80px;
-      height: 80px;
+      background-image: url("../img/4.svg");
+      background-position: 124px 2px;
+      background-repeat: no-repeat;
+      background-size: 120px 227px;
     }
   }
+}
+
+.features__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: @basic-green;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__item--icon-leaf::before {
+  background-image: url("../img/icon-leaf.svg");
+}
+
+.features__item--icon-glass::before {
+  background-image: url("../img/icon-glass.svg");
+}
+
+.features__item--icon-cutlery::before {
+  background-image: url("../img/icon-cutlery.svg");
+}
+
+.features__item--icon-clock::before {
+  background-image: url("../img/icon-clock.svg");
 }
 
 .features__list {

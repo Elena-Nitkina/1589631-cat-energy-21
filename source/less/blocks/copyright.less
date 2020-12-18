@@ -6,10 +6,22 @@
   color: @special-dark-grey;
   text-decoration: none;
   padding-top: 7px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__link-logo {
   @media (min-width: @tablet-width) {
     margin-left: 22px;
   }
+}
+
+.copyright__link-logo:hover .copyright-icon {
+  fill: @basic-green;
+}
+
+.copyright__link-logo:active .copyright-icon {
+  opacity: 0.3;
 }
