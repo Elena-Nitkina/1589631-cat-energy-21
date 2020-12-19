@@ -1,4 +1,4 @@
-.personal__item {
+.contacts__item {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -7,26 +7,17 @@
   padding-bottom: 14px;
 }
 
-.personal__input {
+.contacts__input {
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: @special-dark-grey;
   text-transform: uppercase;
-  border: 1px solid @input;
+  border: 1px solid @input-dark;
 
-  // Состояние для input error реализовано через модификатор
-  &--error {
-    border: 2px solid @input-error;
-  }
-
-  &:hover {
-    border: 1px solid @input-dark;
-  }
-
-  &:focus {
-    border: 1px solid @special-dark-grey;
+  &:disabled {
+    border: 2px solid @special-dark-grey;
   }
 
   &::placeholder {

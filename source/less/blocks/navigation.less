@@ -6,6 +6,7 @@
   @media (min-width: @tablet-width) {
     width: 440px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -21,6 +22,28 @@
   color: @black;
   text-transform: uppercase;
   text-decoration: none;
+  display: block;
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 22px;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-top: 17px;
+    padding-bottom: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 0;
+    padding-bottom: 5px;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -37,14 +60,93 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .main-nav__toggle {
+.main-nav__container {
+  @media (min-width: @desktop-width) {
+    padding-top: 45px;
+  }
+}
+
+.main-nav {
+  position: relative;
+  width: auto;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -45px;
+  right: 20px;
+  display: block;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
-.main-nav__container {
-  @media (min-width: @desktop-width) {
-    padding-top: 45px;
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__item {
+  @media (max-width: @mobile-width-only) {
+    border-top: 1px solid @nav-border-top;
+  }
+
+  &--active-index {
+    @media (min-width: @tablet-width) {
+      border-bottom: 2px solid @basic-green;
+    }
+
+    @media (min-width: @desktop-width) {
+      border-bottom: 2px solid @white;
+    }
+  }
+
+  &--active-inner {
+    @media (min-width: @tablet-width) {
+      border-bottom: 2px solid @basic-green;
+    }
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
   }
 }

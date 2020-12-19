@@ -4,19 +4,14 @@
   display: flex;
   flex-direction: column;
 
-  &--index-page {
-    @media (min-width: @desktop-width) {
-      position: absolute;
-      top: 0;
-      left: 90px;
-      width: 100%;
-    }
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
   }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    max-width: 708px;
+    width: 708px;
     margin: 0 auto;
     padding-top: 25px;
   }
@@ -25,10 +20,25 @@
     margin: auto;
     max-width: 1220px;
   }
+
+  &--index-page {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      margin-left: -631px;
+      z-index: 2;
+    }
+  }
 }
 
 .page-header__logo {
-  min-height: 66px;
+  min-height: 52px;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 12px 23px 0 20px;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 76px;
@@ -39,5 +49,60 @@
     min-height: 141px;
     width: 202px;
     padding-top: 30px;
+  }
+
+  &:hover {
+    @media (min-width: @desktop-width) {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    @media (min-width: @desktop-width) {
+      opacity: 0.6;
+    }
+  }
+}
+
+.page-header__logo-icon {
+  @media (max-width: @mobile-width-only) {
+    margin-right: 51px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 8px;
+  }
+}
+
+.logo-icon__image {
+  width: 34px;
+  height: 38px;
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    height: 60px;
+  }
+}
+
+.logo-text__image {
+  padding-bottom: 8px;
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: @tablet-width) {
+    width: 102px;
+    height: 20px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 118px;
+    height: 24px;
+    padding-bottom: 17px;
   }
 }
