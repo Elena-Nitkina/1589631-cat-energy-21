@@ -3,113 +3,175 @@
   line-height: 26px;
   font-weight: 400;
   color: @black;
+  margin-top: 6px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+
+  &--title-frames {
+    display: flex;
+    align-items: center;
+  }
+
+  &--title-frames::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: @basic-green;
+      margin-right: 40px;
+      margin-top: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 70px;
+    }
+  }
+
+  &--title-frames::after {
+    content: "";
+    flex-grow: 5;
+    flex-shrink: 0;
+    height: 2px;
+    background: @basic-green;
+    margin-left: 15px;
+    margin-top: 10px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 42px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 40px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 43px;
+    margin-bottom: 72px;
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 37px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+  }
 }
 
 .selection-form__legend {
   font-family: @special-font, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   color: @black;
   justify-self: center;
+  margin: 20px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    justify-self: left;
+  }
 
   @media (min-width: @desktop-width) {
     justify-self: start;
-    margin-left: 60px;
   }
 }
 
 .selection-form__personal {
-  padding: 20px;
+  padding: 24px 20px;
+  border-bottom: 1px solid @link-border;
 
   @media (min-width: @tablet-width) {
-    padding: 35px 40px;
+    padding: 45px 40px;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     padding: 0;
+    min-width: 570px;
   }
 }
 
 .selection-form__needs {
-  padding: 20px;
+  padding: 20px 20px 12px 20px;
   border: none;
+  border-bottom: 1px solid @link-border;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
-    margin-left: 40px;
-    padding: 25px;
+    margin: 30px 40px 0 40px;
+    padding: 15px 25px;
     border: 1px solid @input;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 0;
+    min-width: 520px;
   }
 }
 
 .selection-form__contacts {
-  padding: 20px;
+  padding: 20px 0 7px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 35px 40px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: auto;
-    max-width: 1220px;
+    padding: 35px 0;
   }
 }
 
 .selection-form__comment {
-  padding: 20px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    padding: 35px 40px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: auto;
-    max-width: 1220px;
+    padding: 13px 0;
   }
 }
 
 .selection-form__extra {
-  padding: 20px;
+  padding: 0;
   border: none;
+  margin: 0 0 30px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 35px 40px;
+    padding-top: 35px;
+    padding-bottom: 45px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin: auto;
-    max-width: 1220px;
-  }
-}
-
-.selection-form {
-  @media (min-width: @tablet-width) {
-    padding: 0 30px;
+    padding-bottom: 53px;
   }
 }
 
 .selection-form__submit {
-  padding: 0 20px;
+  padding: 0 20px 11px 20px;
   display: grid;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    padding: 0 40px;
+    padding: 0 70px;
+    gap: 63px;
+    margin-bottom: 69px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: auto;
+    margin: 0 auto;
     max-width: 1220px;
+    gap: 80px;
+    padding-bottom: 76px;
   }
 }
 
 .selection-form__contact-details {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
@@ -119,10 +181,15 @@
 }
 
 .selection-form__top {
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    margin: 0 auto;
+    padding-top: 67px;
     max-width: 1220px;
   }
 }

@@ -4,7 +4,21 @@
   font-weight: 400;
   color: @special-dark-grey;
   text-transform: uppercase;
-  padding-bottom: 14px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.personal__item:last-child {
+  margin-bottom: 0;
 }
 
 .personal__input {
@@ -15,6 +29,16 @@
   color: @special-dark-grey;
   text-transform: uppercase;
   border: 1px solid @input;
+  margin-left: 14px;
+  padding: 10px 0 10px 13px;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 20px;
+    margin-left: 17px;
+  }
 
   // Состояние для input error реализовано через модификатор
   &--error {
@@ -37,5 +61,10 @@
     color: @special-dark-grey;
     text-transform: uppercase;
     opacity: 1;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

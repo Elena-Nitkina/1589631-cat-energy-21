@@ -1,5 +1,5 @@
 .extra-goods {
-  padding: 20px;
+  padding: 20px 0;
 
   @media (min-width: @tablet-width) {
     padding: 30px;
@@ -11,13 +11,43 @@
   line-height: 24px;
   font-weight: 400;
   color: @black;
+  margin: 0;
+  padding-top: 8px;
+  padding-left: 20px;
+  padding-bottom: 35px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 35px;
+    padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
+  }
+
+  &--title-frames {
+    display: flex;
+    align-items: center;
+  }
+
+  &--title-frames::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: @basic-green;
+      margin-right: 40px;
+      margin-top: 10px;
+    }
+  }
+
+  &--title-frames::after {
+    content: "";
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 2px;
+    background: @basic-green;
+    margin-left: 22px;
+    margin-top: 10px;
   }
 }
 
@@ -26,21 +56,27 @@
   padding-bottom: 19px;
   display: grid;
   grid-template-rows: min-content min-content min-content;
+  border-top: 1px solid @input-dark;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
+    border-top: none;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content;
   }
+
+  &:last-child {
+    border-bottom: 1px solid @input-dark;
+  }
 }
 
 .extra-goods__list {
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -55,28 +91,6 @@
   }
 }
 
-.item__heading {
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.item__items {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-width: 280px;
-  padding-bottom: 15px;
-
-  @media (min-width: @tablet-width) {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    align-content: center;
-    justify-items: end;
-  }
-}
-
-.item__number {
-  margin: 0;
-  justify-self: end;
+.button--extra-goods {
+  text-align: center;
 }

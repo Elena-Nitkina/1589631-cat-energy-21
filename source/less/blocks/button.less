@@ -8,6 +8,7 @@
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  padding: 10px 0;
 
   &:hover {
     background-color: @basic-green-2;
@@ -15,6 +16,10 @@
 
   &:active {
     color: fade(@white, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
   }
 
   &--extra-goods {
