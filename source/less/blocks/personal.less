@@ -32,6 +32,8 @@
   margin-left: 14px;
   padding: 10px 0 10px 13px;
   flex-grow: 1;
+  outline: none;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -42,7 +44,8 @@
 
   // Состояние для input error реализовано через модификатор
   &--error {
-    border: 2px solid @input-error;
+    outline: 2px solid @input-error;
+    outline-offset: -1px;
   }
 
   &:hover {
