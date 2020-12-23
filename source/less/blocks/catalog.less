@@ -4,6 +4,10 @@
   @media (min-width: @tablet-width) {
     padding: 123px 30px 30px 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 163px;
+  }
 }
 
 .catalog__list {
@@ -14,13 +18,14 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
+    grid-gap: 139px 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
     max-width: 1220px;
+    grid-gap: 141px 80px;
   }
 }
 
@@ -29,16 +34,16 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, min-content);
   align-content: end;
-  padding: 20px 20px 23px 20px;
+  padding: 20px 20px 22px 20px;
   border-bottom: 1px solid @special-grey;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, min-content);
     background-color: @basic-grey;
-    width: 252px;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding: 0 36px 36px 36px;
+    min-height: 375px;
+    position: relative;
   }
 }
 
@@ -47,8 +52,15 @@
   padding: 20px 0;
   border-top: 1px solid @special-grey;
   border-bottom: 1px solid @special-grey;
+  background-image: url("../img/more-products-plus.svg");
+  background-size: 30px 30px;
+  background-position: top 26px center;
+  background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
     border: 2px solid @basic-grey;
+    padding: 20px 36px 36px 36px;
+    background-size: 60px 60px;
+    background-position: top 53px center;
   }
 }

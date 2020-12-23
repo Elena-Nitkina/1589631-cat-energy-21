@@ -25,18 +25,35 @@
   }
 
   &--extra-goods {
+    text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+    }
 
     @media (min-width: @desktop-width) {
       grid-column-start: 3;
       grid-column-end: 4;
-      margin-left: 35px;
+      margin-left: 45px;
     }
   }
 
   &--catalog-item {
     grid-column-start: 1;
     grid-column-end: 3;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 1px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      margin-top: 7px;
+      margin-bottom: 4px;
+      margin-left: 3px;
+    }
   }
 }
