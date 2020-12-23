@@ -5,6 +5,19 @@
   color: @special-black;
   text-transform: uppercase;
   text-align: center;
+  padding-top: 43px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    padding: 120px 35px 0 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .item-more__slogan {
@@ -14,6 +27,19 @@
   font-weight: 400;
   color: @special-dark-grey;
   text-align: center;
+  margin-top: 7px;
+  margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 0 11px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .item-more__button {
@@ -26,6 +52,9 @@
   text-transform: uppercase;
   display: block;
   align-self: end;
+  margin: 0 20px;
+  padding: 10px 0;
+  text-align: center;
 
   &:hover {
     background-color: @special-grey;
@@ -33,5 +62,9 @@
 
   &:active {
     color: fade(@special-dark-grey, 30%);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }

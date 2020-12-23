@@ -1,28 +1,30 @@
 .footer-promo {
   height: 289px;
-  width: 240px;
+  width: auto;
   background-image: url("../img/footer-promo-background.png");
-  background-position: 0 0;
+  background-position: 50% 0;
   background-repeat: no-repeat;
   color: @white;
   padding: 0 20px;
-  margin: 0 20px 35px 20px;
+  margin-top: 40px;
+  background-color: @background-promo-green;
 
   @media (min-width: @tablet-width) {
+    margin-top: 70px;
+    margin-bottom: 40px;
     background-color: @basic-green;
-    margin: 0 30px 75px 30px;
     height: 200px;
     width: auto;
-    max-width: 668px;
+    background-image: url("../img/footer-promo-background-tablet.png");
+    background-size: cover;
   }
 
   @media (min-width: @desktop-width) {
-    width: 205px;
-    height: 289px;
-    margin: 0 20px 35px 20px;
-    position: absolute;
-    right: 110px;
-    bottom: -622px;
+    margin: 0;
+    min-width: 205px;
+    min-height: 289px;
+    height: auto;
+    background-image: url("../img/footer-promo-background.png");
   }
 }
 
@@ -34,18 +36,24 @@
   color: @white;
   text-align: center;
   margin: 0;
-  padding: 145px 24px 0 24px;
+  padding-top: 187px;
+  background-image: url("../img/footer-promo-icon.svg");
+  background-size: 78px 80px;
+  background-position: top 58px center;
+  background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
     text-align: start;
     padding-top: 70px;
-    padding-left: 423px;
+    padding-left: 402px;
+    background-position: top 58px left 58px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: center;
-    padding-top: 185px;
+    padding-top: 188px;
     padding-left: 0;
     padding-right: 0;
+    background-position: top 58px left 65px;
   }
 }

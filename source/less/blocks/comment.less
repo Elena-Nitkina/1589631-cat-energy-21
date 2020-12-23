@@ -1,3 +1,44 @@
+.comment__title {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  color: @black;
+  margin-top: 11px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  position: absolute;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 0;
+    margin-bottom: 67px;
+    left: 30px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 70px;
+    max-width: 1220px;
+    left: 50%;
+    margin-left: -650px;
+  }
+}
+
+.comment__block {
+  padding: 73px 20px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 111px 70px 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: 1220px;
+  }
+}
+
 .comment__area {
   font-family: inherit;
   font-size: 16px;
@@ -5,6 +46,20 @@
   font-weight: 400;
   color: @special-dark-grey;
   text-transform: uppercase;
+  padding-top: 9px;
+  padding-left: 14px;
+  height: 150px;
+  border: 1px solid @input;
+  box-sizing: border-box;
+  width: 100%;
+  resize: none;
+
+  @media (min-width: @tablet-width) {
+    height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 18px;
+  }
 
   &::placeholder {
     font-family: inherit;
@@ -14,5 +69,10 @@
     color: @special-dark-grey;
     text-transform: uppercase;
     opacity: 1;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
