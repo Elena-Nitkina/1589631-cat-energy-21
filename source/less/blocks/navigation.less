@@ -23,12 +23,9 @@
   text-transform: uppercase;
   text-decoration: none;
   display: block;
-
-  @media (max-width: @mobile-width-only) {
-    padding-top: 22px;
-    padding-bottom: 24px;
-    text-align: center;
-  }
+  padding-top: 22px;
+  padding-bottom: 24px;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
@@ -120,8 +117,16 @@
 }
 
 .main-nav__item {
-  @media (max-width: @mobile-width-only) {
-    border-top: 1px solid @nav-border-top;
+  border-top: 1px solid @nav-border;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
+
+  &:last-child {
+    @media (max-width: @mobile-width-only) {
+      border-bottom: 1px solid @nav-border;
+    }
   }
 
   &--active-index {
