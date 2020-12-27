@@ -1,7 +1,7 @@
 .footer-promo {
   height: 289px;
   width: auto;
-  background-image: url("../img/footer-promo-background.png");
+  background-image: url("../img/footer-promo-background.jpg");
   background-position: 50% 0;
   background-repeat: no-repeat;
   color: @white;
@@ -9,14 +9,24 @@
   margin-top: 42px;
   background-color: @background-promo-green;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/footer-promo-background@2x.jpg");
+    background-size: auto 289px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 68px;
     margin-bottom: 40px;
     background-color: @basic-green;
     height: 200px;
     width: auto;
-    background-image: url("../img/footer-promo-background-tablet.png");
+    background-image: url("../img/footer-promo-background-tablet.jpg");
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/footer-promo-background-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -24,7 +34,12 @@
     min-width: 205px;
     min-height: 289px;
     height: auto;
-    background-image: url("../img/footer-promo-background.png");
+    background-image: url("../img/footer-promo-background.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/footer-promo-background@2x.jpg");
+      background-size: cover;
+    }
   }
 }
 

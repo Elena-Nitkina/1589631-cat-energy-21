@@ -57,7 +57,26 @@
   @media (min-width: @tablet-width) {
     grid-row-end: 2;
     position: absolute;
-    top: -185px;
+  }
+
+  &--small {
+    @media (min-width: @tablet-width) {
+      top: -205px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -212px;
+    }
+  }
+
+  &--big {
+    @media (min-width: @tablet-width) {
+      top: -233px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -242px;
+    }
   }
 }
 
