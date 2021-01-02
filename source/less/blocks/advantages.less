@@ -157,17 +157,27 @@
   padding-right: 55px;
 
   @media (min-width: @tablet-width) {
-    background-position: right 5px center;
+    background-position: right 9px center;
+    padding-right: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: right 2px center;
+    background-position: right 10px center;
+    padding-right: 65px;
   }
 
   &:hover {
     background-image: url("../img/catalog-link-icon-hover.svg");
     background-size: 32px 12px;
     background-position: right 7px center;
+
+    @media (min-width: @tablet-width) {
+      background-position: right 1px center;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-position: right 2px center;
+    }
   }
 
   &:active {
