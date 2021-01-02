@@ -30,6 +30,7 @@
 .social__image--vkontakte {
   width: 23px;
   height: 16px;
+  fill: @social-icon;
 
   @media (min-width: @tablet-width) {
     width: 30px;
@@ -40,6 +41,7 @@
 .social__image--instagram {
   width: 16px;
   height: 16px;
+  fill: @social-icon;
 
   @media (min-width: @tablet-width) {
     width: 23px;
@@ -50,6 +52,11 @@
 .social__image--facebook {
   width: 22px;
   height: 22px;
+  stroke: @social-icon;
+  fill: none;
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 
   @media (min-width: @tablet-width) {
     width: 28px;
@@ -57,33 +64,15 @@
   }
 }
 
-.social__icon--vkontakte {
-  fill: @social-icon;
-}
-
-.social__icon--instagram {
-  fill: @social-icon;
-}
-
-.social__icon--facebook {
-  stroke: @social-icon;
-  stroke-width: 1.1;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.social__link:hover .social__icon--vkontakte {
+.social__link:hover .social__image--vkontakte,
+.social__link:hover .social__image--instagram {
   fill: @basic-green;
 }
 
-.social__link:hover .social__icon--instagram {
-  fill: @basic-green;
-}
-
-.social__link:hover .social__icon--facebook {
+.social__link:hover .social__image--facebook {
   stroke: @basic-green;
 }
 
-.social__link:active .social__icon {
+.social__link:active .social-image {
   opacity: 0.3;
 }
