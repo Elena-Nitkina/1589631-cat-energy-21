@@ -71,3 +71,8 @@
 .needs__input:checked:disabled + .needs__label {
   opacity: 0.3;
 }
+
+.needs__input:focus + .needs__label::before {
+  border: 2px solid @special-darken-grey;
+  border-radius: 50%;
+}

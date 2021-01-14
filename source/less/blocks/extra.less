@@ -110,3 +110,7 @@
 .extra__input:checked:disabled + .extra__label {
   opacity: 0.3;
 }
+
+.extra__input:focus + .extra__label::before {
+  outline: 2px solid @special-darken-grey;
+}
