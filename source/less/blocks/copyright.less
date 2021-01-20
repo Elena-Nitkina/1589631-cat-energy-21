@@ -1,34 +1,31 @@
-.copyright__link-text {
+.copyright__link {
   font-family: @special-font, sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: @special-dark-grey;
   text-decoration: none;
-  padding-top: 7px;
   height: min-content;
+  display: flex;
+  justify-content: space-between;
 
   &:active {
     opacity: 0.3;
   }
 }
 
-.copyright__link-logo {
-  height: min-content;
+.copyright__link-html-academy {
+  padding-top: 7px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 22px;
+    padding-right: 24px;
   }
 }
 
-.copyright-icon {
+.copyright__icon {
   fill: @social-icon;
 }
 
-.copyright__link-logo:hover .copyright-icon {
+.copyright__link:hover .copyright__icon {
   fill: @basic-green;
-}
-
-.copyright__link-logo:active .copyright-icon {
-  opacity: 0.3;
 }

@@ -51,8 +51,8 @@
   }
 }
 
-.extra-goods__item {
-  padding-top: 12px;
+.extra-goods__extra-goods-item {
+  padding-top: 13px;
   padding-bottom: 17px;
   display: grid;
   grid-template-rows: repeat(3, min-content);
@@ -102,5 +102,24 @@
   @media (min-width: @desktop-width) {
     border: none;
     margin-right: 80px;
+  }
+}
+
+.extra-goods__container-extra {
+  padding: 65px 20px 15px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 136px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 143px;
+    padding-bottom: 63px;
+    margin: 0 auto;
+    max-width: 1220px;
+    display: flex;
+    justify-content: center;
   }
 }
