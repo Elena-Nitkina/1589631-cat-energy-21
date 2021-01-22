@@ -2,6 +2,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid @nav-border;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -9,6 +10,7 @@
     width: 708px;
     margin: 0 auto;
     padding-top: 25px;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -34,15 +36,14 @@
 .page-header__logo {
   min-height: 52px;
   padding: 12px 23px 0 20px;
+  width: min-content;
 
   @media (min-width: @tablet-width) {
     min-height: 76px;
-    width: 174px;
     padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 202px;
     padding-top: 30px;
   }
 
